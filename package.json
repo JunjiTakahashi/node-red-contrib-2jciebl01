@@ -1,0 +1,25 @@
+{
+  "name": "red-contrib-2jciebl01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JunjiTakahashi/node-red-contrib-2jciebl01.git"
+  },
+  "keywords": [
+    "omron"
+  ],
+  "author": "JunjiTakahashi",
+  "license": "Apache2.0",
+  "bugs": {
+    "url": "https://github.com/JunjiTakahashi/node-red-contrib-2jciebl01/issues"
+  },
+  "homepage": "https://github.com/JunjiTakahashi/node-red-contrib-2jciebl01#readme",
+  "dependencies": {
+    "noble": "^1.9.1"
+  }
+}
