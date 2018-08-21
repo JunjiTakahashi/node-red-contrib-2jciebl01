@@ -45,7 +45,16 @@ noble.on('discover', function(peripheral) {
                 } catch(err) {
                     console.log(err);
                 }
-                console.log(envData);
+                console.log(
+                    'Macアドレス: ' + envData.macAddress + '\n' +
+                    '電波強度: ' + envData.rssi + '\n' +
+                    '温度: ' + envData.Temperature + '\n' +
+                    '湿度: ' + envData.Humidity + '\n' +
+                    '照度: ' + envData.ambient_light + '\n' +
+                    'UV指数: ' + envData.uv_index + '\n' +
+                    '気圧: ' + envData.pressure + '\n' +
+                    '音量: ' + envData.Noise + '\n' +
+                    'バッテリー: ' + envData.battery_voltage + '\n');
             }
         }
     }
