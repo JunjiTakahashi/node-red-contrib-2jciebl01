@@ -1,31 +1,4 @@
 require('date-utils');
-//var awsIot = require('aws-iot-device-sdk');
-//var config = require('./config.json');
-// 設定ファイルを使いまわすためClientIDにサフィックスを付与する
-//config.clientId = config.clientId + "-blend-agent";
-//var device = awsIot.device(config);
-
-/*
-device.on('connect', function () {
-  console.log('connect');
-});
-device.on('close', function () {
-  console.log('close');
-});
-device.on('reconnect', function () {
-  console.log('reconnect');
-});
-device.on('offline', function () {
-  console.log('offline');
-});
-device.on('error', function (error) {
-  console.log('error', error);
-});
-device.on('message', function (topic, payload) {
-  console.log('message', topic, payload.toString());
-});
-*/
-
 var noble = require('noble');
 
 noble.on('stateChange', function (state) {
@@ -53,8 +26,16 @@ setInterval(function () {
       var envLen = envWork[key].length;
       if (envLen > 0) {
         var envLast = envWork[key][envLen - 1];
-        console.info("publish env: " + JSON.stringify(envLast));
-        //device.publish('env', JSON.stringify(envLast));
+        console.log(
+          'Macアドレス: ' + envLast.macAddress + '\n' +
+          '電波強度: ' + envLast.rssi + '\n' +
+          '温度: ' + envLast.Temperature + '\n' +
+          '湿度: ' + envLast.Humidity + '\n' +
+          '照度: ' + envLast.ambient_light + '\n' +
+          'UV指数: ' + envLast.uv_index + '\n' +
+          '気圧: ' + envLast.pressure + '\n' +
+          '音量: ' + envLast.Noise + '\n' +
+          'バッテリー: ' + envLast.battery_voltage + '\n');
       }
     }
     // uminoie2018 update
