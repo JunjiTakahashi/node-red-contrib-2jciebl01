@@ -27,7 +27,7 @@ setInterval(function () {
       if (envLen > 0) {
         var envLast = envWork[key][envLen - 1];
         console.log(
-          'Macアドレス: ' + envLast.macAddress + '\n' +
+          'Macアドレス: ' + envLast.ID + '\n' +
           '電波強度: ' + envLast.rssi + '\n' +
           '温度: ' + envLast.Temperature + '\n' +
           '湿度: ' + envLast.Humidity + '\n' +
